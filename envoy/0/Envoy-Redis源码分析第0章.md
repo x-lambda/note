@@ -37,6 +37,10 @@
 
 可以看见这个叫`sidecar`的东西代替了`SLB`和`redis-proxy(twemproxy)`的功能。实际中这个`sidecar`叫伴生容器，配合`k8s`可以方便的部署服务。这个`sidecar`上就运行着`Envoy`二进制文件。只需要配置一下，就可以代理我们的账号和支付以及`redis`服务。
 
+当然真实生产环境中，业务的依赖会很多，很复杂，于是`Service Mesh`部署起来就会变成如下场景
+
+![Service Mesh网格](./envoy_0_4.png)
+
 ##### 使用方式
 
 参考图中的服务依赖，我们知道`envoy`需要作为3个代理同时运行，且看`HTTP`代理配置
