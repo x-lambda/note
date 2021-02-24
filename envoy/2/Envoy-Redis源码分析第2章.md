@@ -14,7 +14,9 @@
 
 `L7`: `HTTP proxy`
 
-而实现这些代理的功能就是靠`filter`实现的，`L4`是`TCP filter`，`L7`是`HTTP filter`。当然有的`filter`很常用，`envoy`已经帮我们写好了，例如`HTTP`相关的，`redis`，`MySQL`之类的。此系列只说`TCP filter`，所以`HTTP`这里暂不用管。当我们要扩展`envoy`时，支持自定义协议时，实际上就是去添加这些`filter`。
+而实现这些代理的功能就是靠`filter`实现的，`L4`是`TCP filter`，`L7`是`HTTP filter`。当然有的`filter`很常用，`envoy`已经帮我们写好了，例如`HTTP`相关的，`redis`，`MySQL`之类的。当我们要扩展`envoy`时，支持自定义协议时，实际上就是去添加这些`filter`。
+
+如果我们使用的是`tcp`协议，就需要实现`tcp filter proxy`。实现也不复杂，先声明一个`FilterProxy class`，这个`class`实现了指定的方法，然后把`class`注册到`envoy`中。这样我们启动`envoy`时，通过配置文件中声明的`listener`，就可以接管下游的流量。
 
 
 
@@ -49,6 +51,8 @@ class Filter: public ReadFilter, public WriteFilter {};
 每个`filter`都要实现以上的方法，然后根据配置和代码的规则依次去回调对应的方法，从而构成完整的代理链路。
 
 `envoy`收到客户端的请求时，可以通过一些列`filter func`，这些函数各有各的功能，如果不符合预期，还可以将请求拦截，不再往下透传。
+
+熟悉`select/epoll`编程的人大概一眼就看明白了。
 
 
 
