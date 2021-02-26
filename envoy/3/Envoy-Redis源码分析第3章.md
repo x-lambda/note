@@ -233,7 +233,7 @@ SplitRequestPtr InstanceImpl::makeRequest(Common::Redis::RespValuePtr&& request,
 2. 管理上游的`cluster`，`handler`会根据`key`找到上游对应的机器，把请求转发过去
 3. 接收上游的响应，把结果转给下游
 
-今天只讲了第1步，但是由于`c++`代码的复杂性，以及`envoy-redis`的设计【吐槽一下`request/callback`不停的转换】，导致代码难读。但是只要功夫下的深，没有读不懂的代码，希望读者可以多花些精力去理解，去跟踪。
+今天只讲了第1步，但是由于`c++`代码的复杂性，以及`envoy-redis`的设计【吐槽一下`request/callback`不停的转换】，导致代码比较难读。
 
 
 
