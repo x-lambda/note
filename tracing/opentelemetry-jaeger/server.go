@@ -43,7 +43,7 @@ func createExporter(batcher string, endpoint string) (exporter sdktrace.SpanExpo
 
 // initServerTraceProvider 服务端otel tracing配置
 // 开发环境可以一键部署jaeger:
-// docker run -d -p6831:6831/udp -p16686:16686 jaegertracing/all-in-one:latest
+// docker run -d -p6831:6831/udp -p16686:16686 -p14268:14268 jaegertracing/all-in-one:latest
 func initServerTraceProvider() {
 	endpoint := "127.0.0.1:6831" // udp协议端口
 	sampler := 1.0
