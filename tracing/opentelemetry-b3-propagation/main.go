@@ -30,6 +30,8 @@ import (
 //
 // 就需要修改otel的context propagation
 // otel在扩展包中有提供已经实现的b3 propagation: https://pkg.go.dev/go.opentelemetry.io/contrib/propagators/b3
+// 扩展包提供了常见的context propagators:
+//       https://github.com/open-telemetry/opentelemetry-go-contrib/tree/main/propagators
 
 // GetTraceID 提取trace id
 func GetTraceID(ctx context.Context) (traceID string) {
