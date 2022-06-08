@@ -35,6 +35,7 @@ curl http://127.0.0.1:3000/
 sudo grafana-cli plugins install grafana-piechart-panel
 ```
 安装之后，插件地址默认是: `/usr/local/var/lib/grafana/plugins/grafana-piechart-panel`
+
 不同版本或者系统可能不一样
 
 2.4 配置`grafana`支持饼图
@@ -45,11 +46,13 @@ vim /opt/homebrew/etc/grafana/grafana.ini
 [plugin.piechart]
 path = /usr/local/var/lib/grafana/plugins/grafana-piechart-panel
 ```
+![grafana config](./imgs/grafana_config.png)
 
 2.5 重启`grafana`
 ```shell
 brew services restart grafana
 ```
+![grafana dashboard](./imgs/grafana_dashboard.png)
 
 3.0 配置`grafana`
 ### TODO
