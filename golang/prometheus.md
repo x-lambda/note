@@ -2,6 +2,7 @@
 
 1.0 `Mac`安装`prometheus`
 ```shell
+# 2.36.1
 brew install prometheus
 ```
 
@@ -13,6 +14,11 @@ brew services start prometheus
 1.2 检查`prometheus`是否正常启动运行
 ```shell
 curl http://127.0.0.1:9090/graph
+```
+
+1.3 修改`prometheus`配置
+```shell
+vim /opt/homebrew/etc/prometheus.yml
 ```
 
 2.0 `Mac`安装`grafana`
@@ -54,6 +60,12 @@ brew services restart grafana
 ```
 ![grafana dashboard](./imgs/grafana_dashboard.png)
 
-3.0 配置`grafana`
+3.0 配置`prometheus`
+/opt/homebrew/etc/prometheus.yml
+
+4.0 配置`grafana`
 ### TODO
 
+
+https://cloud.tencent.com/developer/article/1812416
+https://027580.xyz/2022/03/02/7.html
