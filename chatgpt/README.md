@@ -11,13 +11,13 @@
 
 登录注册`https://sms-activate.org/`
 然后直接支付宝充值2刀即可，大约14.5CNY，充值完界面如图
-![充值界面](./sms.png)
+![充值界面](./img/sms.png)
 
 左下角就是各种`app`验证码的业务，可以直接选`OpenAI`，然后选择`印度尼西亚`(因为便宜)
-![印尼](./sms_2.png)
+![印尼](./img/sms_2.png)
 
 后续在注册的时候选择`Indonesia`即可(注意`sms-activate`里面是`+628`，两个是一样的)
-![in](./openai_auth.png)
+![in](./img/openai_auth.png)
 
 至此已经完成注册流程，现在已经可以进入`chatgpt`官网对答了。默认的是用`chatgpt3.5`模型，不过显然有更多的人希望能体验到最新的`chatgpt4.0`或者基于`openai`提供的接口搭建新服务，因此我们还需要氪金。
 
@@ -35,9 +35,9 @@
     注意：如果想在接口中使用`chatgpt4.0`模型，必须先开通`plus`会员，然后排队申请，排队时间不确定，目前在一些微信群里看到有人申请到了，但是数量不多，实际体验确实4快很多，效果也比3.5好。
    
     官方文档上写着前3个月提供免费5刀的额度，实测新注册的用户已经没有了
-    ![price](./openai_price.png)
+    ![price](./img/openai_price.png)
     用户中心的免费额度为0
-    ![billing](./billing.png)
+    ![billing](./img/billing.png)
 
 以上就是`openai`的付费模式，考虑到需要办理海外的信用卡，但是又没法肉身翻墙，只能在网上另寻野路子了。  
 
@@ -54,62 +54,62 @@
 ### 开通流程
 1. 使用美区的`Apple ID`下载下图软件
    
-   ![app](./app.jpeg)
+   ![app](./img/app.jpeg)
 2. 打开`Depay`注册并实名验证
    
-    ![depay](./depay_user.png)
+    ![depay](./img/depay_user.png)
 3. 可以在`Depay`的首页看到申请的信用卡(此时的卡还未激活，需要充值`USDT`)
    
-    ![card](./depay_card.png)
+    ![card](./img/depay_card.png)
 4. 充值`USDT`(币圈的加密货币，和美元价格相同)
    
     4.1 选择钱包
     
-    ![wallet](./usdt.png)
+    ![wallet](./img/usdt.png)
    
     4.2 选择充币
     
-    ![wallet_pay](./usdt2.png)
+    ![wallet_pay](./img/usdt2.png)
    
     4.3 选择主网`TRC20`(这玩意是啥我也不懂)
     
-    ![net](./usdt3.png)
+    ![net](./img/usdt3.png)
    
     4.4 复制链接(如果你觉得我写得好，也可以给我打赏一点`TVdsT8yPrSYreYYZDw67azpAT8E4eXRnbW`)
     
-    ![link](./usdt4.png)
+    ![link](./img/usdt4.png)
    
 5. 在`欧易`中购买`USDT`，然后提币到`Depay`(也可以直接找代付的，注意不要买太多就行)
    
     5.1 购买`USDT`(📢📢📢炒币违法，这里只当学习使用，不要买卖虚拟货币)
    
-    ![](./okx1.png)
+    ![](./img/okx1.png)
    
     5.2 选择"快捷买币"
    
-    ![](./okx2.png)
+    ![](./img/okx2.png)
    
     5.3 选择"USDT"
    
-    ![](./okx3.png)
+    ![](./img/okx3.png)
    
     5.4 填写要购买的数量，够`chatgpt`使用就行，不要买太多!!!
    
-    ![](./okx4.png)
+    ![](./img/okx4.png)
    
     5.5 使用微信或者支付宝支付(这里会有个加微信的过程，需要转账给默生人)
    
-    ![](./okx5.png)
+    ![](./img/okx5.png)
    
     5.6 充值完成之后，查看账户(提币到`Depay`需要等24小时之后)
    
-    ![](./okx6.png)
+    ![](./img/okx6.png)
    
 6. 到`Depay`中激活卡面，至此完成开户的流程
    
 7. 在`openai`中绑定信用卡
    
-   ![](./openai_pay_card.png)
+   ![](./img/openai_pay_card.png)
     
 # 3. 调用接口
 调用接口不复杂，官方里的文档有说明，`github`上搜一下也全是封装好的第三方库，这里推荐一个开源的`golang`包
