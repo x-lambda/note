@@ -1,4 +1,4 @@
-# 国内使用`chatgpt`接口教程
+# 国内使用`chatgpt`接口指南
 
 # 1. 注册
 `openai`针对`ip`做了限制，国内不允许注册，因此需要科学上网，同时需要搞个国外的手机号负责接收验证码
@@ -34,7 +34,7 @@
     
     注意：如果想在接口中使用`chatgpt4.0`模型，必须先开通`plus`会员，然后排队申请，排队时间不确定，目前在一些微信群里看到有人申请到了，但是数量不多，实际体验确实4快很多，效果也比3.5好。
    
-    官方文档上写着前3个月提供免费5刀的额度，实测新注册的用户已经没有了
+    官方文档上写着前3个月提供免费5刀的额度，~~实测新注册的用户已经没有了~~(更正，有的账号有，有的账号没有，不知道是不是跟同一个手机号注册的有关)
     ![price](./img/openai_price.png)
     用户中心的免费额度为0
     ![billing](./img/billing.png)
@@ -110,7 +110,10 @@
 7. 在`openai`中绑定信用卡
    
    ![](./img/openai_pay_card.png)
-    
+ 
+8. 参考
+   * `https://taoshu.in/ai/pay-chatgpt.html`
+   
 # 3. 调用接口
 调用接口不复杂，官方里的文档有说明，`github`上搜一下也全是封装好的第三方库，这里推荐一个开源的`golang`包
 * `https://github.com/sashabaranov/go-openai`
@@ -142,3 +145,12 @@ func SendQuestion(ctx context.Context, question string) (err error) {
 	return
 }
 ```
+
+回答如图
+![question](./img/question.png)
+
+***
+如果您觉得这篇文章对您有帮助，您可以打赏,感激不尽❤️❤️❤️
+![alipay](./img/pay_ali.png)
+![wx_pay](./img/pay_wx.png)
+
