@@ -115,7 +115,7 @@
     ![wallet](./img/wallet_coin.png)
    
 6. 到`Depay`中激活卡面，至此完成开户的流程，至此已经拿到一张完整的美国的信用卡了，以后就可以用这张信用卡正常支付
-   ![wallet_card](./img/wallet_card.png)
+   ![wallet_card](./img/card_info.png)
    
 7. 在`openai`中绑定信用卡
    
